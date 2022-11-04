@@ -37,10 +37,10 @@ test('clicking add to duo button displays the div with id #player-duo', async ()
     driver.findElement(By.id('draw')).click()
     await driver.sleep(1000)
 
-    driver.findElement(By.id("choices")).click()
+    driver.findElement(By.css("bot.btn")).click()
     await driver.sleep(2000)
 
-    const playerDuo = await driver.findElement(By.id('player-duo.container'))
+    const playerDuo = await driver.findElement(By.id('player-duo'))
     const displayed = await playerDuo.isDisplayed()
 
     expect(displayed).toBe(true)
